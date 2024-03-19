@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-19T22:21:07.840990" rpa="false" schemaversion="5">
+<suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
+<suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
+<suite id="s1-s1-s1" name="testRegistration" source="D:\Automation_Testing\Test_Suite\testRegistration.robot">
+<test id="s1-s1-s1-t1" name="Verify the functionality of registration page" line="13">
+<kw name="Open My browser" owner="registrationResource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-19T22:21:08.263966" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/login?q=signup'.</msg>
+<arg>${Url}</arg>
+<arg>${broswer}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-19T22:21:08.263966" elapsed="33.477084"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-19T22:21:41.742457" elapsed="0.175296"/>
+</kw>
+<arg>${Url}</arg>
+<arg>${broswer}</arg>
+<status status="PASS" start="2024-03-19T22:21:08.263966" elapsed="33.654867"/>
+</kw>
+<kw name="Enter User Name" owner="registrationResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T22:21:41.931230" level="INFO">Typing text 'Rutika' into text field 'id:ctl00_phBody_SignUp_txtName'.</msg>
+<arg>${text_name}</arg>
+<arg>${Name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T22:21:41.928784" elapsed="0.279869"/>
+</kw>
+<arg>${Name}</arg>
+<status status="PASS" start="2024-03-19T22:21:41.925204" elapsed="0.283449"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T22:21:45.219534" level="INFO">Slept 3 seconds.</msg>
+<arg>3 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T22:21:42.209656" elapsed="3.009878"/>
+</kw>
+<kw name="Click on continue" owner="registrationResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-19T22:21:45.219534" level="INFO">Clicking button 'id:ctl00_phBody_SignUp_btnContinue'.</msg>
+<arg>${text_continuebutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T22:21:45.219534" elapsed="0.202207"/>
+</kw>
+<status status="PASS" start="2024-03-19T22:21:45.219534" elapsed="0.202207"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T22:21:50.424720" level="INFO">Slept 5 seconds.</msg>
+<arg>5 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T22:21:45.422813" elapsed="5.001907"/>
+</kw>
+<status status="PASS" start="2024-03-19T22:21:08.262984" elapsed="42.161736"/>
+</test>
+<status status="PASS" start="2024-03-19T22:21:07.877449" elapsed="42.555747"/>
+</suite>
+<status status="PASS" start="2024-03-19T22:21:07.875213" elapsed="42.566915"/>
+</suite>
+<status status="PASS" start="2024-03-19T22:21:07.844223" elapsed="42.602563"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testRegistration">Automation Testing.Test Suite.testRegistration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
