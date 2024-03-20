@@ -6,13 +6,27 @@ Resource       ../Resource/Page_Object/registrationResource.robot
 ${Url}    https://www.bookswagon.com/login?q=signup
 ${broswer}    chrome
 ${Name}    Rutika
-${Countrycode}    United States +1
+${Countrycode}    US +1
+${Mobile Number}    9021657453
 
 
 *** Test Cases ***
-Verify the functionality of registration page
+registrationButtonTest
     Open My browser    ${Url}    ${broswer}
     Enter User Name    ${Name}
     Sleep    3 second
-    Click On Continue
+    Click On Continue Button
     Sleep    5 second
+
+RegistrationTest
+    Open My Browser    ${Url}    ${broswer}
+    Enter User Name    ${Name}
+    Select Country Code   ${Countrycode}
+    Enter A Mobile Number    ${Mobile Number}
+    Sleep    5 second
+    Click On Continue Button
+    Sleep    3 second
+
+
+
+

@@ -1,64 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-19T22:21:07.840990" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-20T20:46:18.254204" rpa="false" schemaversion="5">
 <suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
 <suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
 <suite id="s1-s1-s1" name="testRegistration" source="D:\Automation_Testing\Test_Suite\testRegistration.robot">
-<test id="s1-s1-s1-t1" name="Verify the functionality of registration page" line="13">
+<test id="s1-s1-s1-t1" name="RegistrationTest" line="21">
 <kw name="Open My browser" owner="registrationResource">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-19T22:21:08.263966" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/login?q=signup'.</msg>
+<msg time="2024-03-20T20:46:19.103064" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/login?q=signup'.</msg>
 <arg>${Url}</arg>
 <arg>${broswer}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-19T22:21:08.263966" elapsed="33.477084"/>
+<status status="PASS" start="2024-03-20T20:46:19.103064" elapsed="24.233749"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-19T22:21:41.742457" elapsed="0.175296"/>
+<status status="PASS" start="2024-03-20T20:46:43.337819" elapsed="0.136975"/>
 </kw>
 <arg>${Url}</arg>
 <arg>${broswer}</arg>
-<status status="PASS" start="2024-03-19T22:21:08.263966" elapsed="33.654867"/>
+<status status="PASS" start="2024-03-20T20:46:19.102077" elapsed="24.372717"/>
 </kw>
 <kw name="Enter User Name" owner="registrationResource">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-19T22:21:41.931230" level="INFO">Typing text 'Rutika' into text field 'id:ctl00_phBody_SignUp_txtName'.</msg>
+<msg time="2024-03-20T20:46:43.486989" level="INFO">Typing text 'Rutika' into text field 'id:ctl00_phBody_SignUp_txtName'.</msg>
 <arg>${text_name}</arg>
 <arg>${Name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T22:21:41.928784" elapsed="0.279869"/>
+<status status="PASS" start="2024-03-20T20:46:43.480607" elapsed="0.273005"/>
 </kw>
 <arg>${Name}</arg>
-<status status="PASS" start="2024-03-19T22:21:41.925204" elapsed="0.283449"/>
+<status status="PASS" start="2024-03-20T20:46:43.477525" elapsed="0.276087"/>
+</kw>
+<kw name="Select country code" owner="registrationResource">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-03-20T20:46:43.755802" level="INFO">Selecting options from selection list 'id:ctl00_phBody_SignUp_ddlCountryMobileCode' by value US +1.</msg>
+<arg>${text_countrycode}</arg>
+<arg>${Countrycode}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-03-20T20:46:43.754609" elapsed="0.262758"/>
+</kw>
+<arg>${Countrycode}</arg>
+<status status="PASS" start="2024-03-20T20:46:43.754609" elapsed="0.262758"/>
+</kw>
+<kw name="Enter a Mobile Number" owner="registrationResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T20:46:44.017367" level="INFO">Typing text '9021657453' into text field 'id:ctl00_phBody_SignUp_txtEmail'.</msg>
+<arg>${text_mobilenumber}</arg>
+<arg>${Mobile Number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T20:46:44.017367" elapsed="0.245484"/>
+</kw>
+<arg>${Mobile Number}</arg>
+<status status="PASS" start="2024-03-20T20:46:44.017367" elapsed="0.245484"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-19T22:21:45.219534" level="INFO">Slept 3 seconds.</msg>
-<arg>3 second</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-19T22:21:42.209656" elapsed="3.009878"/>
-</kw>
-<kw name="Click on continue" owner="registrationResource">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-19T22:21:45.219534" level="INFO">Clicking button 'id:ctl00_phBody_SignUp_btnContinue'.</msg>
-<arg>${text_continuebutton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T22:21:45.219534" elapsed="0.202207"/>
-</kw>
-<status status="PASS" start="2024-03-19T22:21:45.219534" elapsed="0.202207"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-19T22:21:50.424720" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-03-20T20:46:49.270478" level="INFO">Slept 5 seconds.</msg>
 <arg>5 second</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-19T22:21:45.422813" elapsed="5.001907"/>
+<status status="PASS" start="2024-03-20T20:46:44.263840" elapsed="5.006638"/>
 </kw>
-<status status="PASS" start="2024-03-19T22:21:08.262984" elapsed="42.161736"/>
+<kw name="Click on continue button" owner="registrationResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-20T20:46:49.270478" level="INFO">Clicking button 'id:ctl00_phBody_SignUp_btnContinue'.</msg>
+<arg>${text_continuebutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T20:46:49.270478" elapsed="3.163302"/>
+</kw>
+<status status="PASS" start="2024-03-20T20:46:49.270478" elapsed="3.164518"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-20T20:46:55.436247" level="INFO">Slept 3 seconds.</msg>
+<arg>3 second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-20T20:46:52.436071" elapsed="3.000176"/>
+</kw>
+<status status="PASS" start="2024-03-20T20:46:19.100073" elapsed="36.336174"/>
 </test>
-<status status="PASS" start="2024-03-19T22:21:07.877449" elapsed="42.555747"/>
+<status status="PASS" start="2024-03-20T20:46:18.344978" elapsed="37.100674"/>
 </suite>
-<status status="PASS" start="2024-03-19T22:21:07.875213" elapsed="42.566915"/>
+<status status="PASS" start="2024-03-20T20:46:18.337564" elapsed="37.125115"/>
 </suite>
-<status status="PASS" start="2024-03-19T22:21:07.844223" elapsed="42.602563"/>
+<status status="PASS" start="2024-03-20T20:46:18.261627" elapsed="37.212095"/>
 </suite>
 <statistics>
 <total>
