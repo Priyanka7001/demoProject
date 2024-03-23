@@ -1,99 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-20T20:46:18.254204" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-23T17:06:24.831259" rpa="false" schemaversion="5">
 <suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
 <suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
 <suite id="s1-s1-s1" name="testRegistration" source="D:\Automation_Testing\Test_Suite\testRegistration.robot">
-<test id="s1-s1-s1-t1" name="RegistrationTest" line="21">
-<kw name="Open My browser" owner="registrationResource">
+<test id="s1-s1-s1-t1" name="002 Verify Registering an Account with valid User Name and Mobile Number" line="15">
+<kw name="Visit Registration Page" owner="registrationResource">
+<kw name="Open My Browser" owner="commonResources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-20T20:46:19.103064" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/login?q=signup'.</msg>
+<msg time="2024-03-23T17:06:25.185985" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
 <arg>${Url}</arg>
 <arg>${broswer}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-20T20:46:19.103064" elapsed="24.233749"/>
+<status status="PASS" start="2024-03-23T17:06:25.185985" elapsed="5.504155"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-03-23T17:06:30.732041" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EF117062+63090]
+	(No symbol) [0x00007FF7EF082CB2]
+	(No symbol) [0x00007FF7EEF1EC65]
+	(No symbol) [0x00007FF7EEEFCA7C]
+	(No symbol) [0x00007FF7EEF8D687]
+	(No symbol) [0x00007FF7EEFA2AC1]
+	(No symbol) [0x00007FF7EEF86D83]
+	(No symbol) [0x00007FF7EEF583A8]
+	(No symbol) [0x00007FF7EEF59441]
+	GetHandleVerifier [0x00007FF7EF5125CD+4238301]
+	GetHandleVerifier [0x00007FF7EF54F72D+4488509]
+	GetHandleVerifier [0x00007FF7EF547A0F+4456479]
+	GetHandleVerifier [0x00007FF7EF1F05A6+953270]
+	(No symbol) [0x00007FF7EF08E57F]
+	(No symbol) [0x00007FF7EF089254]
+	(No symbol) [0x00007FF7EF08938B]
+	(No symbol) [0x00007FF7EF079BC4]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</msg>
+<msg time="2024-03-23T17:06:30.736016" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EF117062+63090]
+	(No symbol) [0x00007FF7EF082CB2]
+	(No symbol) [0x00007FF7EEF1EC65]
+	(No symbol) [0x00007FF7EEEFCA7C]
+	(No symbol) [0x00007FF7EEF8D687]
+	(No symbol) [0x00007FF7EEFA2AC1]
+	(No symbol) [0x00007FF7EEF86D83]
+	(No symbol) [0x00007FF7EEF583A8]
+	(No symbol) [0x00007FF7EEF59441]
+	GetHandleVerifier [0x00007FF7EF5125CD+4238301]
+	GetHandleVerifier [0x00007FF7EF54F72D+4488509]
+	GetHandleVerifier [0x00007FF7EF547A0F+4456479]
+	GetHandleVerifier [0x00007FF7EF1F05A6+953270]
+	(No symbol) [0x00007FF7EF08E57F]
+	(No symbol) [0x00007FF7EF089254]
+	(No symbol) [0x00007FF7EF08938B]
+	(No symbol) [0x00007FF7EF079BC4]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-20T20:46:43.337819" elapsed="0.136975"/>
+<status status="FAIL" start="2024-03-23T17:06:30.691135" elapsed="0.049869">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EF117062+63090]
+	(No symbol) [0x00007FF7EF082CB2]
+	(No symbol) [0x00007FF7EEF1EC65]
+	(No symbol) [0x00007FF7EEEFCA7C]
+	(No symbol) [0x00007FF7EEF8D687]
+	(No symbol) [0x00007FF7EEFA2AC1]
+	(No symbol) [0x00007FF7EEF86D83]
+	(No symbol) [0x00007FF7EEF583A8]
+	(No symbol) [0x00007FF7EEF59441]
+	GetHandleVerifier [0x00007FF7EF5125CD+4238301]
+	GetHandleVerifier [0x00007FF7EF54F72D+4488509]
+	GetHandleVerifier [0x00007FF7EF547A0F+4456479]
+	GetHandleVerifier [0x00007FF7EF1F05A6+953270]
+	(No symbol) [0x00007FF7EF08E57F]
+	(No symbol) [0x00007FF7EF089254]
+	(No symbol) [0x00007FF7EF08938B]
+	(No symbol) [0x00007FF7EF079BC4]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</status>
 </kw>
-<arg>${Url}</arg>
-<arg>${broswer}</arg>
-<status status="PASS" start="2024-03-20T20:46:19.102077" elapsed="24.372717"/>
+<status status="FAIL" start="2024-03-23T17:06:25.184987" elapsed="5.557016">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EF117062+63090]
+	(No symbol) [0x00007FF7EF082CB2]
+	(No symbol) [0x00007FF7EEF1EC65]
+	(No symbol) [0x00007FF7EEEFCA7C]
+	(No symbol) [0x00007FF7EEF8D687]
+	(No symbol) [0x00007FF7EEFA2AC1]
+	(No symbol) [0x00007FF7EEF86D83]
+	(No symbol) [0x00007FF7EEF583A8]
+	(No symbol) [0x00007FF7EEF59441]
+	GetHandleVerifier [0x00007FF7EF5125CD+4238301]
+	GetHandleVerifier [0x00007FF7EF54F72D+4488509]
+	GetHandleVerifier [0x00007FF7EF547A0F+4456479]
+	GetHandleVerifier [0x00007FF7EF1F05A6+953270]
+	(No symbol) [0x00007FF7EF08E57F]
+	(No symbol) [0x00007FF7EF089254]
+	(No symbol) [0x00007FF7EF08938B]
+	(No symbol) [0x00007FF7EF079BC4]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</status>
 </kw>
-<kw name="Enter User Name" owner="registrationResource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-20T20:46:43.486989" level="INFO">Typing text 'Rutika' into text field 'id:ctl00_phBody_SignUp_txtName'.</msg>
-<arg>${text_name}</arg>
-<arg>${Name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-20T20:46:43.480607" elapsed="0.273005"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>visiting registration page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-03-23T17:06:30.742003" elapsed="0.000000"/>
 </kw>
-<arg>${Name}</arg>
-<status status="PASS" start="2024-03-20T20:46:43.477525" elapsed="0.276087"/>
-</kw>
-<kw name="Select country code" owner="registrationResource">
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-03-20T20:46:43.755802" level="INFO">Selecting options from selection list 'id:ctl00_phBody_SignUp_ddlCountryMobileCode' by value US +1.</msg>
-<arg>${text_countrycode}</arg>
-<arg>${Countrycode}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-03-20T20:46:43.754609" elapsed="0.262758"/>
-</kw>
-<arg>${Countrycode}</arg>
-<status status="PASS" start="2024-03-20T20:46:43.754609" elapsed="0.262758"/>
-</kw>
-<kw name="Enter a Mobile Number" owner="registrationResource">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-20T20:46:44.017367" level="INFO">Typing text '9021657453' into text field 'id:ctl00_phBody_SignUp_txtEmail'.</msg>
-<arg>${text_mobilenumber}</arg>
-<arg>${Mobile Number}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-20T20:46:44.017367" elapsed="0.245484"/>
-</kw>
-<arg>${Mobile Number}</arg>
-<status status="PASS" start="2024-03-20T20:46:44.017367" elapsed="0.245484"/>
+<kw name="Click on My Account Dropdown" owner="registrationResource">
+<status status="NOT RUN" start="2024-03-23T17:06:30.742999" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-20T20:46:49.270478" level="INFO">Slept 5 seconds.</msg>
-<arg>5 second</arg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-20T20:46:44.263840" elapsed="5.006638"/>
+<status status="NOT RUN" start="2024-03-23T17:06:30.742999" elapsed="0.000000"/>
 </kw>
-<kw name="Click on continue button" owner="registrationResource">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-20T20:46:49.270478" level="INFO">Clicking button 'id:ctl00_phBody_SignUp_btnContinue'.</msg>
-<arg>${text_continuebutton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-20T20:46:49.270478" elapsed="3.163302"/>
+<status status="FAIL" start="2024-03-23T17:06:25.184987" elapsed="5.559012">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EF117062+63090]
+	(No symbol) [0x00007FF7EF082CB2]
+	(No symbol) [0x00007FF7EEF1EC65]
+	(No symbol) [0x00007FF7EEEFCA7C]
+	(No symbol) [0x00007FF7EEF8D687]
+	(No symbol) [0x00007FF7EEFA2AC1]
+	(No symbol) [0x00007FF7EEF86D83]
+	(No symbol) [0x00007FF7EEF583A8]
+	(No symbol) [0x00007FF7EEF59441]
+	GetHandleVerifier [0x00007FF7EF5125CD+4238301]
+	GetHandleVerifier [0x00007FF7EF54F72D+4488509]
+	GetHandleVerifier [0x00007FF7EF547A0F+4456479]
+	GetHandleVerifier [0x00007FF7EF1F05A6+953270]
+	(No symbol) [0x00007FF7EF08E57F]
+	(No symbol) [0x00007FF7EF089254]
+	(No symbol) [0x00007FF7EF08938B]
+	(No symbol) [0x00007FF7EF079BC4]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</status>
 </kw>
-<status status="PASS" start="2024-03-20T20:46:49.270478" elapsed="3.164518"/>
+<kw name="Fill Registration Details" owner="registrationResource">
+<arg>Rutika</arg>
+<arg>9021657453</arg>
+<arg>Rutika@123</arg>
+<arg>Rutika@123</arg>
+<status status="NOT RUN" start="2024-03-23T17:06:30.747993" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-20T20:46:55.436247" level="INFO">Slept 3 seconds.</msg>
-<arg>3 second</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-20T20:46:52.436071" elapsed="3.000176"/>
-</kw>
-<status status="PASS" start="2024-03-20T20:46:19.100073" elapsed="36.336174"/>
+<status status="FAIL" start="2024-03-23T17:06:25.183977" elapsed="5.567000">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EF117062+63090]
+	(No symbol) [0x00007FF7EF082CB2]
+	(No symbol) [0x00007FF7EEF1EC65]
+	(No symbol) [0x00007FF7EEEFCA7C]
+	(No symbol) [0x00007FF7EEF8D687]
+	(No symbol) [0x00007FF7EEFA2AC1]
+	(No symbol) [0x00007FF7EEF86D83]
+	(No symbol) [0x00007FF7EEF583A8]
+	(No symbol) [0x00007FF7EEF59441]
+	GetHandleVerifier [0x00007FF7EF5125CD+4238301]
+	GetHandleVerifier [0x00007FF7EF54F72D+4488509]
+	GetHandleVerifier [0x00007FF7EF547A0F+4456479]
+	GetHandleVerifier [0x00007FF7EF1F05A6+953270]
+	(No symbol) [0x00007FF7EF08E57F]
+	(No symbol) [0x00007FF7EF089254]
+	(No symbol) [0x00007FF7EF08938B]
+	(No symbol) [0x00007FF7EF079BC4]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</status>
 </test>
-<status status="PASS" start="2024-03-20T20:46:18.344978" elapsed="37.100674"/>
+<status status="FAIL" start="2024-03-23T17:06:24.873933" elapsed="5.880035"/>
 </suite>
-<status status="PASS" start="2024-03-20T20:46:18.337564" elapsed="37.125115"/>
+<status status="FAIL" start="2024-03-23T17:06:24.871938" elapsed="5.889013"/>
 </suite>
-<status status="PASS" start="2024-03-20T20:46:18.261627" elapsed="37.212095"/>
+<status status="FAIL" start="2024-03-23T17:06:24.835241" elapsed="5.930695"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testRegistration">Automation Testing.Test Suite.testRegistration</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testRegistration">Automation Testing.Test Suite.testRegistration</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-03-23T17:06:24.795330" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-03-23T17:06:25.175014" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-03-23T17:06:30.732041" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.58)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7EF117062+63090]
+	(No symbol) [0x00007FF7EF082CB2]
+	(No symbol) [0x00007FF7EEF1EC65]
+	(No symbol) [0x00007FF7EEEFCA7C]
+	(No symbol) [0x00007FF7EEF8D687]
+	(No symbol) [0x00007FF7EEFA2AC1]
+	(No symbol) [0x00007FF7EEF86D83]
+	(No symbol) [0x00007FF7EEF583A8]
+	(No symbol) [0x00007FF7EEF59441]
+	GetHandleVerifier [0x00007FF7EF5125CD+4238301]
+	GetHandleVerifier [0x00007FF7EF54F72D+4488509]
+	GetHandleVerifier [0x00007FF7EF547A0F+4456479]
+	GetHandleVerifier [0x00007FF7EF1F05A6+953270]
+	(No symbol) [0x00007FF7EF08E57F]
+	(No symbol) [0x00007FF7EF089254]
+	(No symbol) [0x00007FF7EF08938B]
+	(No symbol) [0x00007FF7EF079BC4]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</msg>
 </errors>
 </robot>
