@@ -18,6 +18,11 @@ Variables    ../Variables/registrationVariable.py
     ${pageUrl}=    Get Current Page URL
     Should Contain    ${pageUrl}    myaccount    both eual
 
+003 Verify Registering an Account with invalid OTP
+    Visit Registration Page
+    Fill Registration Details    Rutika    8007022590   Rutika@123    Rutika@123
+    ${pageUrl}=    Get Current Page URL
+    Should Not Contain    ${pageUrl}    myaccount    both not eual
 
 
 
