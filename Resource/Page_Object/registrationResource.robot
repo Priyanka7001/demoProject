@@ -17,10 +17,10 @@ Fill Registration Details
     Enter User Name    ${name}
 #    Select Country Code    ${countryCode}
     Enter A Mobile Number    ${mobileNumber}
-    Sleep    40s
+    Sleep    30s
     Click On Continue Button
     Unselect subscribe checkbox
-    Sleep    60s
+    Sleep    20s
     Enter Password    ${password}
     Enter Confirm Password    ${confirmpassword}
     Click On Signup Button
