@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-25T18:08:22.824328" rpa="false" schemaversion="5">
+<suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
+<suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
+<suite id="s1-s1-s1" name="testLogin" source="D:\Automation_Testing\Test_Suite\testLogin.robot">
+<test id="s1-s1-s1-t1" name="001 Verify the Functionality of Login Button" line="8">
+<kw name="Visit the Login Page" owner="loginpageResources">
+<kw name="Open My Browser" owner="commonResources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-25T18:08:23.379873" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-25T18:08:23.378875" elapsed="19.399650"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-25T18:08:42.778525" elapsed="0.252261"/>
+</kw>
+<status status="PASS" start="2024-03-25T18:08:23.377770" elapsed="19.653016"/>
+</kw>
+<kw name="Click On MyAccount Dropdown and Click on Login" owner="loginpageResources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${text_myaccountarrow}</arg>
+<arg>40s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-25T18:08:43.032780" elapsed="0.067837"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-25T18:08:43.101616" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
+<arg>${text_myaccountarrow}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-25T18:08:43.100617" elapsed="0.305421"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-25T18:08:43.406038" level="INFO">Clicking element 'xpath://a[normalize-space()='Log in']'.</msg>
+<arg>${text_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-25T18:08:43.406038" elapsed="3.512362"/>
+</kw>
+<status status="PASS" start="2024-03-25T18:08:43.031782" elapsed="3.886618"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-25T18:08:48.918882" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-25T18:08:46.918400" elapsed="2.000482"/>
+</kw>
+<status status="PASS" start="2024-03-25T18:08:23.376771" elapsed="25.543173"/>
+</kw>
+<kw name="Get Current Page URL" owner="commonResources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-03-25T18:08:48.956003" level="INFO">${currentURL} = https://www.bookswagon.com/login</msg>
+<var>${currentURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-03-25T18:08:48.927580" elapsed="0.028423"/>
+</kw>
+<return>
+<value>${currentURL}</value>
+<status status="PASS" start="2024-03-25T18:08:48.956003" elapsed="0.015586"/>
+</return>
+<msg time="2024-03-25T18:08:48.971589" level="INFO">${actualUrl} = https://www.bookswagon.com/login</msg>
+<var>${actualUrl}</var>
+<status status="PASS" start="2024-03-25T18:08:48.924575" elapsed="0.047014"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${actualUrl}</arg>
+<arg>login</arg>
+<arg>both URL are equal</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-03-25T18:08:48.971589" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-25T18:08:23.375774" elapsed="25.595815"/>
+</test>
+<status status="PASS" start="2024-03-25T18:08:22.886813" elapsed="26.084776"/>
+</suite>
+<status status="PASS" start="2024-03-25T18:08:22.871193" elapsed="26.123007"/>
+</suite>
+<status status="PASS" start="2024-03-25T18:08:22.839949" elapsed="26.157585"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testLogin">Automation Testing.Test Suite.testLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
