@@ -29,13 +29,13 @@ Enter User Passowrd
     Input Text    ${text_password}    ${passWord}
 
 Click on Login Button
-    Click Button    ${text_loginbutton}
+    Click Element      ${text_loginbutton}
 
 Click on Forget Your Password
     Click Element    ${text_forgotpassword}
 
 Click on Request OTP Button
-    Click Button    ${text_requestotp}
+    Click Element    ${text_requestotp}
 
 Click on Google Icon
     Click Element    ${text_googleicon}
