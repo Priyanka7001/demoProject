@@ -42,3 +42,6 @@ Click on Google Icon
 
 Click on New to Bookswagon? Sign up
     Click Element    ${text_signup}
+
+Click on Verify OTP
+    Click Element    ${text_verifyotp}

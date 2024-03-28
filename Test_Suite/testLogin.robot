@@ -88,4 +88,29 @@ Variables    ../Variable/loginpageVariable.py
     Click On Google Icon
     Page Should Contain    Google sign-in has a new look    not done
 
-013 
+013 Verify OTP is generated and Sent to the Mobile Number
+    Visit The Login Page
+    Enter User Mobile Number    9021657453
+    Click On Request OTP Button
+    Page Should Contain    Login via OTP    Failed
+    Close All Browsers
+
+014 Verify if OTP is Successfully Verified
+    Visit The Login Page
+    Enter User Mobile Number    9021657453
+    Click On Request OTP Button
+    Sleep    15s
+    Click On Verify OTP
+    Page Should Contain    myaccount    Failed
+    Sleep    20s
+    Close All Browsers
+
+015 Verify incorrect OTP is Rejected
+    Visit The Login Page
+    Enter User Mobile Number    9021657453
+    Click On Request OTP Button
+    Sleep    10s
+    Click On Verify OTP
+    Page Should Not Contain    myaccount    Failed
+    Close All Browsers
+
