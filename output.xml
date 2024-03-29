@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-28T21:08:07.194785" rpa="false" schemaversion="5">
+<suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
+<suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
+<suite id="s1-s1-s1" name="testLogin" source="D:\Automation_Testing\Test_Suite\testLogin.robot">
+<test id="s1-s1-s1-t1" name="014 Verify if OTP is Successfully Verified" line="98">
+<kw name="Visit the Login Page" owner="loginpageResources">
+<kw name="Open My Browser" owner="commonResources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:08:07.552768" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-28T21:08:07.552768" elapsed="8.302511"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-28T21:08:15.855279" elapsed="0.397764"/>
+</kw>
+<status status="PASS" start="2024-03-28T21:08:07.552768" elapsed="8.700275"/>
+</kw>
+<kw name="Click On MyAccount Dropdown and Click on Login" owner="loginpageResources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${text_myaccountarrow}</arg>
+<arg>40s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-28T21:08:16.253043" elapsed="0.115031"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:08:16.368074" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
+<arg>${text_myaccountarrow}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:08:16.368074" elapsed="0.444636"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:08:16.813708" level="INFO">Clicking element 'xpath://a[normalize-space()='Log in']'.</msg>
+<arg>${text_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:08:16.812710" elapsed="4.040015"/>
+</kw>
+<status status="PASS" start="2024-03-28T21:08:16.253043" elapsed="4.600711"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-28T21:08:22.855413" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-28T21:08:20.853754" elapsed="2.002251"/>
+</kw>
+<status status="PASS" start="2024-03-28T21:08:07.552768" elapsed="15.303237"/>
+</kw>
+<kw name="Enter User Mobile Number" owner="loginpageResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:08:22.856005" level="INFO">Typing text '9021657453' into text field 'id:ctl00_phBody_SignIn_txtEmail'.</msg>
+<arg>${text_mobile}</arg>
+<arg>${mobileNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:08:22.856005" elapsed="0.283644"/>
+</kw>
+<arg>9021657453</arg>
+<status status="PASS" start="2024-03-28T21:08:22.856005" elapsed="0.283644"/>
+</kw>
+<kw name="Click on Request OTP Button" owner="loginpageResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:08:23.142486" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnRequestOTP'.</msg>
+<arg>${text_requestotp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-28T21:08:23.142092" elapsed="0.261465"/>
+</kw>
+<status status="PASS" start="2024-03-28T21:08:23.140647" elapsed="0.262910"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-28T21:08:38.406824" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-28T21:08:23.406438" elapsed="15.000386"/>
+</kw>
+<kw name="Click on Verify OTP" owner="loginpageResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-28T21:08:38.409616" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnOTP'.</msg>
+<msg time="2024-03-28T21:08:38.415742" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D70E70C2+63090]
+	(No symbol) [0x00007FF7D7052D12]
+	(No symbol) [0x00007FF7D6EEEC65]
+	(No symbol) [0x00007FF7D6ECCA7C]
+	(No symbol) [0x00007FF7D6F5D687]
+	(No symbol) [0x00007FF7D6F72AC1]
+	(No symbol) [0x00007FF7D6F56D83]
+	(No symbol) [0x00007FF7D6F283A8]
+	(No symbol) [0x00007FF7D6F29441]
+	GetHandleVerifier [0x00007FF7D74E262D+4238301]
+	GetHandleVerifier [0x00007FF7D751F78D+4488509]
+	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
+	GetHandleVerifier [0x00007FF7D71C0606+953270]
+	(No symbol) [0x00007FF7D705E5DF]
+	(No symbol) [0x00007FF7D70592B4]
+	(No symbol) [0x00007FF7D70593EB]
+	(No symbol) [0x00007FF7D7049C24]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</msg>
+<msg time="2024-03-28T21:08:38.419459" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D70E70C2+63090]
+	(No symbol) [0x00007FF7D7052D12]
+	(No symbol) [0x00007FF7D6EEEC65]
+	(No symbol) [0x00007FF7D6ECCA7C]
+	(No symbol) [0x00007FF7D6F5D687]
+	(No symbol) [0x00007FF7D6F72AC1]
+	(No symbol) [0x00007FF7D6F56D83]
+	(No symbol) [0x00007FF7D6F283A8]
+	(No symbol) [0x00007FF7D6F29441]
+	GetHandleVerifier [0x00007FF7D74E262D+4238301]
+	GetHandleVerifier [0x00007FF7D751F78D+4488509]
+	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
+	GetHandleVerifier [0x00007FF7D71C0606+953270]
+	(No symbol) [0x00007FF7D705E5DF]
+	(No symbol) [0x00007FF7D70592B4]
+	(No symbol) [0x00007FF7D70593EB]
+	(No symbol) [0x00007FF7D7049C24]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</msg>
+<arg>${text_verifyotp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-28T21:08:38.409616" elapsed="0.212187">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D70E70C2+63090]
+	(No symbol) [0x00007FF7D7052D12]
+	(No symbol) [0x00007FF7D6EEEC65]
+	(No symbol) [0x00007FF7D6ECCA7C]
+	(No symbol) [0x00007FF7D6F5D687]
+	(No symbol) [0x00007FF7D6F72AC1]
+	(No symbol) [0x00007FF7D6F56D83]
+	(No symbol) [0x00007FF7D6F283A8]
+	(No symbol) [0x00007FF7D6F29441]
+	GetHandleVerifier [0x00007FF7D74E262D+4238301]
+	GetHandleVerifier [0x00007FF7D751F78D+4488509]
+	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
+	GetHandleVerifier [0x00007FF7D71C0606+953270]
+	(No symbol) [0x00007FF7D705E5DF]
+	(No symbol) [0x00007FF7D70592B4]
+	(No symbol) [0x00007FF7D70593EB]
+	(No symbol) [0x00007FF7D7049C24]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-03-28T21:08:38.408619" elapsed="0.213184">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D70E70C2+63090]
+	(No symbol) [0x00007FF7D7052D12]
+	(No symbol) [0x00007FF7D6EEEC65]
+	(No symbol) [0x00007FF7D6ECCA7C]
+	(No symbol) [0x00007FF7D6F5D687]
+	(No symbol) [0x00007FF7D6F72AC1]
+	(No symbol) [0x00007FF7D6F56D83]
+	(No symbol) [0x00007FF7D6F283A8]
+	(No symbol) [0x00007FF7D6F29441]
+	GetHandleVerifier [0x00007FF7D74E262D+4238301]
+	GetHandleVerifier [0x00007FF7D751F78D+4488509]
+	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
+	GetHandleVerifier [0x00007FF7D71C0606+953270]
+	(No symbol) [0x00007FF7D705E5DF]
+	(No symbol) [0x00007FF7D70592B4]
+	(No symbol) [0x00007FF7D70593EB]
+	(No symbol) [0x00007FF7D7049C24]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>myaccount</arg>
+<arg>Failed</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-03-28T21:08:38.622424" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-28T21:08:38.623421" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" start="2024-03-28T21:08:38.623421" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-28T21:08:07.551735" elapsed="31.072682">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D70E70C2+63090]
+	(No symbol) [0x00007FF7D7052D12]
+	(No symbol) [0x00007FF7D6EEEC65]
+	(No symbol) [0x00007FF7D6ECCA7C]
+	(No symbol) [0x00007FF7D6F5D687]
+	(No symbol) [0x00007FF7D6F72AC1]
+	(No symbol) [0x00007FF7D6F56D83]
+	(No symbol) [0x00007FF7D6F283A8]
+	(No symbol) [0x00007FF7D6F29441]
+	GetHandleVerifier [0x00007FF7D74E262D+4238301]
+	GetHandleVerifier [0x00007FF7D751F78D+4488509]
+	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
+	GetHandleVerifier [0x00007FF7D71C0606+953270]
+	(No symbol) [0x00007FF7D705E5DF]
+	(No symbol) [0x00007FF7D70592B4]
+	(No symbol) [0x00007FF7D70593EB]
+	(No symbol) [0x00007FF7D7049C24]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</status>
+</test>
+<status status="FAIL" start="2024-03-28T21:08:07.235835" elapsed="31.391861"/>
+</suite>
+<status status="FAIL" start="2024-03-28T21:08:07.233508" elapsed="31.396481"/>
+</suite>
+<status status="FAIL" start="2024-03-28T21:08:07.197576" elapsed="31.434369"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testLogin">Automation Testing.Test Suite.testLogin</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-28T21:08:38.415742" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=123.0.6312.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D70E70C2+63090]
+	(No symbol) [0x00007FF7D7052D12]
+	(No symbol) [0x00007FF7D6EEEC65]
+	(No symbol) [0x00007FF7D6ECCA7C]
+	(No symbol) [0x00007FF7D6F5D687]
+	(No symbol) [0x00007FF7D6F72AC1]
+	(No symbol) [0x00007FF7D6F56D83]
+	(No symbol) [0x00007FF7D6F283A8]
+	(No symbol) [0x00007FF7D6F29441]
+	GetHandleVerifier [0x00007FF7D74E262D+4238301]
+	GetHandleVerifier [0x00007FF7D751F78D+4488509]
+	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
+	GetHandleVerifier [0x00007FF7D71C0606+953270]
+	(No symbol) [0x00007FF7D705E5DF]
+	(No symbol) [0x00007FF7D70592B4]
+	(No symbol) [0x00007FF7D70593EB]
+	(No symbol) [0x00007FF7D7049C24]
+	BaseThreadInitThunk [0x00007FFDAFC87344+20]
+	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
+</msg>
+</errors>
+</robot>
