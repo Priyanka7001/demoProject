@@ -2,6 +2,8 @@
 Library    SeleniumLibrary
 Resource    ../Resource/Page_Object/loginpageResources.robot
 Variables    ../Variable/loginpageVariable.py
+Suite Setup    Open My Browser
+Suite Teardown    Close All Browsers
 
 
 *** Test Cases ***
@@ -93,7 +95,6 @@ Variables    ../Variable/loginpageVariable.py
     Enter User Mobile Number    9021657453
     Click On Request OTP Button
     Page Should Contain    Login via OTP    Failed
-    Close All Browsers
 
 014 Verify if OTP is Successfully Verified
     Visit The Login Page
@@ -103,7 +104,6 @@ Variables    ../Variable/loginpageVariable.py
     Click On Verify OTP
     Page Should Contain    myaccount    Failed
     Sleep    20s
-    Close All Browsers
 
 015 Verify incorrect OTP is Rejected
     Visit The Login Page
@@ -112,5 +112,4 @@ Variables    ../Variable/loginpageVariable.py
     Sleep    10s
     Click On Verify OTP
     Page Should Not Contain    myaccount    Failed
-    Close All Browsers
 
