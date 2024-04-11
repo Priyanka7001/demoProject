@@ -1,264 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-28T21:08:07.194785" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-04-11T20:58:54.187354" rpa="false" schemaversion="5">
 <suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
 <suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
-<suite id="s1-s1-s1" name="testLogin" source="D:\Automation_Testing\Test_Suite\testLogin.robot">
-<test id="s1-s1-s1-t1" name="014 Verify if OTP is Successfully Verified" line="98">
-<kw name="Visit the Login Page" owner="loginpageResources">
-<kw name="Open My Browser" owner="commonResources">
+<suite id="s1-s1-s1" name="testcartPage" source="D:\Automation_Testing\Test_Suite\testcartPage.robot">
+<kw name="Open My Browser" owner="commonResources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:08:07.552768" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
+<msg time="2024-04-11T20:58:54.637857" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-28T21:08:07.552768" elapsed="8.302511"/>
+<status status="PASS" start="2024-04-11T20:58:54.637857" elapsed="15.366096"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-28T21:08:15.855279" elapsed="0.397764"/>
+<status status="PASS" start="2024-04-11T20:59:10.003953" elapsed="0.297972"/>
 </kw>
-<status status="PASS" start="2024-03-28T21:08:07.552768" elapsed="8.700275"/>
+<status status="PASS" start="2024-04-11T20:58:54.636860" elapsed="15.666063"/>
 </kw>
+<test id="s1-s1-s1-t1" name="011 if else" line="68">
+<kw name="Pre condition of add to cart" owner="cartpageResources">
+<kw name="Visit the Login Page" owner="loginpageResources">
 <kw name="Click On MyAccount Dropdown and Click on Login" owner="loginpageResources">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${text_myaccountarrow}</arg>
 <arg>40s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-28T21:08:16.253043" elapsed="0.115031"/>
+<status status="PASS" start="2024-04-11T20:59:10.308217" elapsed="0.063331"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:08:16.368074" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
+<msg time="2024-04-11T20:59:10.374177" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
 <arg>${text_myaccountarrow}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:08:16.368074" elapsed="0.444636"/>
+<status status="PASS" start="2024-04-11T20:59:10.372091" elapsed="0.342702"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:08:16.813708" level="INFO">Clicking element 'xpath://a[normalize-space()='Log in']'.</msg>
+<msg time="2024-04-11T20:59:10.715832" level="INFO">Clicking element 'xpath://a[normalize-space()='Log in']'.</msg>
 <arg>${text_login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:08:16.812710" elapsed="4.040015"/>
+<status status="PASS" start="2024-04-11T20:59:10.714793" elapsed="4.033883"/>
 </kw>
-<status status="PASS" start="2024-03-28T21:08:16.253043" elapsed="4.600711"/>
+<status status="PASS" start="2024-04-11T20:59:10.306963" elapsed="4.442712"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:08:22.855413" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-11T20:59:16.750858" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:08:20.853754" elapsed="2.002251"/>
+<status status="PASS" start="2024-04-11T20:59:14.749982" elapsed="2.001405"/>
 </kw>
-<status status="PASS" start="2024-03-28T21:08:07.552768" elapsed="15.303237"/>
+<status status="PASS" start="2024-04-11T20:59:10.305680" elapsed="6.445707"/>
 </kw>
+<kw name="Fill Login Page Details" owner="loginpageResources">
 <kw name="Enter User Mobile Number" owner="loginpageResources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:08:22.856005" level="INFO">Typing text '9021657453' into text field 'id:ctl00_phBody_SignIn_txtEmail'.</msg>
+<msg time="2024-04-11T20:59:16.755690" level="INFO">Typing text '9021657453' into text field 'id:ctl00_phBody_SignIn_txtEmail'.</msg>
 <arg>${text_mobile}</arg>
 <arg>${mobileNumber}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:08:22.856005" elapsed="0.283644"/>
+<status status="PASS" start="2024-04-11T20:59:16.754972" elapsed="0.216240"/>
+</kw>
+<arg>${mobileNumber}</arg>
+<status status="PASS" start="2024-04-11T20:59:16.751387" elapsed="0.219825"/>
+</kw>
+<kw name="Enter User Passowrd" owner="loginpageResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:16.974111" level="INFO">Typing text 'Rutika@123' into text field 'id:ctl00_phBody_SignIn_txtPassword'.</msg>
+<arg>${text_password}</arg>
+<arg>${passWord}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:16.973115" elapsed="0.194709"/>
+</kw>
+<arg>${passWord}</arg>
+<status status="PASS" start="2024-04-11T20:59:16.972116" elapsed="0.195708"/>
+</kw>
+<kw name="Click on Login Button" owner="loginpageResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:17.171285" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnLogin'.</msg>
+<arg>${text_loginbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:17.171285" elapsed="0.252839"/>
+</kw>
+<status status="PASS" start="2024-04-11T20:59:17.167824" elapsed="0.256603"/>
 </kw>
 <arg>9021657453</arg>
-<status status="PASS" start="2024-03-28T21:08:22.856005" elapsed="0.283644"/>
+<arg>Rutika@123</arg>
+<status status="PASS" start="2024-04-11T20:59:16.751387" elapsed="0.673040"/>
 </kw>
-<kw name="Click on Request OTP Button" owner="loginpageResources">
+<kw name="Add book to cart" owner="cartpageResources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:08:23.142486" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnRequestOTP'.</msg>
-<arg>${text_requestotp}</arg>
+<msg time="2024-04-11T20:59:17.426583" level="INFO">Clicking element 'xpath://a[normalize-space()='Book']'.</msg>
+<arg>${text_book}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-28T21:08:23.142092" elapsed="0.261465"/>
+<status status="PASS" start="2024-04-11T20:59:17.425586" elapsed="2.449124"/>
 </kw>
-<status status="PASS" start="2024-03-28T21:08:23.140647" elapsed="0.262910"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:19.875761" level="INFO">Clicking element 'xpath://ul[@class='list-unstyled maincategory dropdown']//a[@onclick='getSearchResult()'][normalize-space()='Fiction']'.</msg>
+<arg>${text_fiction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:19.875761" elapsed="3.421655"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:23.297416" level="INFO">Clicking element 'xpath://a[normalize-space()='The Hidden Hindu']'.</msg>
+<arg>${text_bookname}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:23.297416" elapsed="11.230471"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:34.527887" level="INFO">Clicking element 'xpath://a[@id='btnAddtocart']'.</msg>
+<arg>${text_addtocartbook}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:34.527887" elapsed="0.252860"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:34.781747" level="INFO">Clicking element 'xpath://a[@href='https://www.bookswagon.com/shoppingcart.aspx']//span[@class='itemcount']'.</msg>
+<arg>${text_cartlogo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:34.781747" elapsed="2.934751"/>
+</kw>
+<status status="PASS" start="2024-04-11T20:59:17.424427" elapsed="20.293071"/>
+</kw>
+<status status="PASS" start="2024-04-11T20:59:10.302923" elapsed="27.414575"/>
+</kw>
+<kw name="Get Total Price" owner="cartpageResources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:37.763889" level="INFO">${price} = ₹12,733</msg>
+<var>${price}</var>
+<arg>${text_totalgross}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:37.719849" elapsed="0.044040"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>price= ${price}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-11T20:59:37.763889" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${price}</value>
+<status status="PASS" start="2024-04-11T20:59:37.764886" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-11T20:59:37.764886" level="INFO">${initial_price} = ₹12,733</msg>
+<var>${initial_price}</var>
+<status status="PASS" start="2024-04-11T20:59:37.718991" elapsed="0.045895"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:37.800946" level="INFO">${currency} = INR</msg>
+<var>${currency}</var>
+<arg>xpath://option[@selected='selected']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:37.764886" elapsed="0.036060"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${currency}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-11T20:59:37.802385" elapsed="0.001583"/>
+</kw>
+<if>
+<branch type="IF" condition="'${CURRENCY_INR}'=='${currency}'">
+<kw name="Select USD Currency" owner="cartpageResources">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:37.804999" level="INFO">Selecting options from selection list 'id:ctl00_phBody_ddlCurrency' by value 1.</msg>
+<arg>${text_currencydropdown}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-04-11T20:59:37.804999" elapsed="0.160875"/>
+</kw>
+<status status="PASS" start="2024-04-11T20:59:37.804999" elapsed="0.162546"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-28T21:08:38.406824" level="INFO">Slept 15 seconds.</msg>
-<arg>15s</arg>
+<msg time="2024-04-11T20:59:40.968507" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-28T21:08:23.406438" elapsed="15.000386"/>
+<status status="PASS" start="2024-04-11T20:59:37.967545" elapsed="3.000962"/>
 </kw>
-<kw name="Click on Verify OTP" owner="loginpageResources">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-28T21:08:38.409616" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnOTP'.</msg>
-<msg time="2024-03-28T21:08:38.415742" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D70E70C2+63090]
-	(No symbol) [0x00007FF7D7052D12]
-	(No symbol) [0x00007FF7D6EEEC65]
-	(No symbol) [0x00007FF7D6ECCA7C]
-	(No symbol) [0x00007FF7D6F5D687]
-	(No symbol) [0x00007FF7D6F72AC1]
-	(No symbol) [0x00007FF7D6F56D83]
-	(No symbol) [0x00007FF7D6F283A8]
-	(No symbol) [0x00007FF7D6F29441]
-	GetHandleVerifier [0x00007FF7D74E262D+4238301]
-	GetHandleVerifier [0x00007FF7D751F78D+4488509]
-	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
-	GetHandleVerifier [0x00007FF7D71C0606+953270]
-	(No symbol) [0x00007FF7D705E5DF]
-	(No symbol) [0x00007FF7D70592B4]
-	(No symbol) [0x00007FF7D70593EB]
-	(No symbol) [0x00007FF7D7049C24]
-	BaseThreadInitThunk [0x00007FFDAFC87344+20]
-	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
-</msg>
-<msg time="2024-03-28T21:08:38.419459" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D70E70C2+63090]
-	(No symbol) [0x00007FF7D7052D12]
-	(No symbol) [0x00007FF7D6EEEC65]
-	(No symbol) [0x00007FF7D6ECCA7C]
-	(No symbol) [0x00007FF7D6F5D687]
-	(No symbol) [0x00007FF7D6F72AC1]
-	(No symbol) [0x00007FF7D6F56D83]
-	(No symbol) [0x00007FF7D6F283A8]
-	(No symbol) [0x00007FF7D6F29441]
-	GetHandleVerifier [0x00007FF7D74E262D+4238301]
-	GetHandleVerifier [0x00007FF7D751F78D+4488509]
-	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
-	GetHandleVerifier [0x00007FF7D71C0606+953270]
-	(No symbol) [0x00007FF7D705E5DF]
-	(No symbol) [0x00007FF7D70592B4]
-	(No symbol) [0x00007FF7D70593EB]
-	(No symbol) [0x00007FF7D7049C24]
-	BaseThreadInitThunk [0x00007FFDAFC87344+20]
-	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
-</msg>
-<arg>${text_verifyotp}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-03-28T21:08:38.409616" elapsed="0.212187">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D70E70C2+63090]
-	(No symbol) [0x00007FF7D7052D12]
-	(No symbol) [0x00007FF7D6EEEC65]
-	(No symbol) [0x00007FF7D6ECCA7C]
-	(No symbol) [0x00007FF7D6F5D687]
-	(No symbol) [0x00007FF7D6F72AC1]
-	(No symbol) [0x00007FF7D6F56D83]
-	(No symbol) [0x00007FF7D6F283A8]
-	(No symbol) [0x00007FF7D6F29441]
-	GetHandleVerifier [0x00007FF7D74E262D+4238301]
-	GetHandleVerifier [0x00007FF7D751F78D+4488509]
-	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
-	GetHandleVerifier [0x00007FF7D71C0606+953270]
-	(No symbol) [0x00007FF7D705E5DF]
-	(No symbol) [0x00007FF7D70592B4]
-	(No symbol) [0x00007FF7D70593EB]
-	(No symbol) [0x00007FF7D7049C24]
-	BaseThreadInitThunk [0x00007FFDAFC87344+20]
-	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
-</status>
-</kw>
-<status status="FAIL" start="2024-03-28T21:08:38.408619" elapsed="0.213184">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D70E70C2+63090]
-	(No symbol) [0x00007FF7D7052D12]
-	(No symbol) [0x00007FF7D6EEEC65]
-	(No symbol) [0x00007FF7D6ECCA7C]
-	(No symbol) [0x00007FF7D6F5D687]
-	(No symbol) [0x00007FF7D6F72AC1]
-	(No symbol) [0x00007FF7D6F56D83]
-	(No symbol) [0x00007FF7D6F283A8]
-	(No symbol) [0x00007FF7D6F29441]
-	GetHandleVerifier [0x00007FF7D74E262D+4238301]
-	GetHandleVerifier [0x00007FF7D751F78D+4488509]
-	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
-	GetHandleVerifier [0x00007FF7D71C0606+953270]
-	(No symbol) [0x00007FF7D705E5DF]
-	(No symbol) [0x00007FF7D70592B4]
-	(No symbol) [0x00007FF7D70593EB]
-	(No symbol) [0x00007FF7D7049C24]
-	BaseThreadInitThunk [0x00007FFDAFC87344+20]
-	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
-</status>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<arg>myaccount</arg>
-<arg>Failed</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2024-03-28T21:08:38.622424" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-11T20:59:37.804999" elapsed="3.163508"/>
+</branch>
+<branch type="ELSE">
+<kw name="Select INR Currency" owner="cartpageResources">
+<status status="NOT RUN" start="2024-04-11T20:59:40.968507" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>20s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-03-28T21:08:38.623421" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-11T20:59:40.968507" elapsed="0.000000"/>
 </kw>
-<kw name="Close All Browsers" owner="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="NOT RUN" start="2024-03-28T21:08:38.623421" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-11T20:59:40.968507" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-04-11T20:59:37.803968" elapsed="3.164539"/>
+</if>
+<kw name="Get Total Price" owner="cartpageResources">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:59:41.029430" level="INFO">${price} = $167.54</msg>
+<var>${price}</var>
+<arg>${text_totalgross}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:59:40.968507" elapsed="0.060923"/>
 </kw>
-<status status="FAIL" start="2024-03-28T21:08:07.551735" elapsed="31.072682">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D70E70C2+63090]
-	(No symbol) [0x00007FF7D7052D12]
-	(No symbol) [0x00007FF7D6EEEC65]
-	(No symbol) [0x00007FF7D6ECCA7C]
-	(No symbol) [0x00007FF7D6F5D687]
-	(No symbol) [0x00007FF7D6F72AC1]
-	(No symbol) [0x00007FF7D6F56D83]
-	(No symbol) [0x00007FF7D6F283A8]
-	(No symbol) [0x00007FF7D6F29441]
-	GetHandleVerifier [0x00007FF7D74E262D+4238301]
-	GetHandleVerifier [0x00007FF7D751F78D+4488509]
-	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
-	GetHandleVerifier [0x00007FF7D71C0606+953270]
-	(No symbol) [0x00007FF7D705E5DF]
-	(No symbol) [0x00007FF7D70592B4]
-	(No symbol) [0x00007FF7D70593EB]
-	(No symbol) [0x00007FF7D7049C24]
-	BaseThreadInitThunk [0x00007FFDAFC87344+20]
-	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
-</status>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>price= ${price}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-11T20:59:41.029430" elapsed="0.000995"/>
+</kw>
+<return>
+<value>${price}</value>
+<status status="PASS" start="2024-04-11T20:59:41.030425" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-11T20:59:41.030425" level="INFO">${updated_price} = $167.54</msg>
+<var>${updated_price}</var>
+<status status="PASS" start="2024-04-11T20:59:40.968507" elapsed="0.061918"/>
+</kw>
+<status status="PASS" start="2024-04-11T20:59:10.302923" elapsed="30.727502"/>
 </test>
-<status status="FAIL" start="2024-03-28T21:08:07.235835" elapsed="31.391861"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-11T20:59:41.033134" elapsed="6.516850"/>
+</kw>
+<status status="PASS" start="2024-04-11T20:58:54.226914" elapsed="53.323531"/>
 </suite>
-<status status="FAIL" start="2024-03-28T21:08:07.233508" elapsed="31.396481"/>
+<status status="PASS" start="2024-04-11T20:58:54.224229" elapsed="53.332920"/>
 </suite>
-<status status="FAIL" start="2024-03-28T21:08:07.197576" elapsed="31.434369"/>
+<status status="PASS" start="2024-04-11T20:58:54.190211" elapsed="53.373089"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testLogin">Automation Testing.Test Suite.testLogin</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testcartPage">Automation Testing.Test Suite.testcartPage</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-03-28T21:08:38.415742" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=123.0.6312.86)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D70E70C2+63090]
-	(No symbol) [0x00007FF7D7052D12]
-	(No symbol) [0x00007FF7D6EEEC65]
-	(No symbol) [0x00007FF7D6ECCA7C]
-	(No symbol) [0x00007FF7D6F5D687]
-	(No symbol) [0x00007FF7D6F72AC1]
-	(No symbol) [0x00007FF7D6F56D83]
-	(No symbol) [0x00007FF7D6F283A8]
-	(No symbol) [0x00007FF7D6F29441]
-	GetHandleVerifier [0x00007FF7D74E262D+4238301]
-	GetHandleVerifier [0x00007FF7D751F78D+4488509]
-	GetHandleVerifier [0x00007FF7D7517A6F+4456479]
-	GetHandleVerifier [0x00007FF7D71C0606+953270]
-	(No symbol) [0x00007FF7D705E5DF]
-	(No symbol) [0x00007FF7D70592B4]
-	(No symbol) [0x00007FF7D70593EB]
-	(No symbol) [0x00007FF7D7049C24]
-	BaseThreadInitThunk [0x00007FFDAFC87344+20]
-	RtlUserThreadStart [0x00007FFDB0DE26B1+33]
-</msg>
 </errors>
 </robot>
