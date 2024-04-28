@@ -3,7 +3,11 @@ Library    SeleniumLibrary
 Resource       ../Resource/Page_Object/registrationResource.robot
 Variables    ../Variables/registrationVariable.py
 
-
+*** Variables ***
+${firstName}    Rutika
+${mobileNumber}    9021657452
+${passWord}    Rutika@123
+${confirmPassword}    Rutika@123
 
 *** Test Cases ***
 001 Verify the Functionality of Signup Button from Myaccount Dropdown
@@ -14,13 +18,13 @@ Variables    ../Variables/registrationVariable.py
 
 002 Verify Registering an Account with valid User Name and Mobile Number
     Visit Registration Page
-    Fill Registration Details    Rutika    9021657453    Rutika@123    Rutika@123
+    Fill Registration Details    ${firstName}    ${mobileNumber}    ${passWord}    ${confirmPassword}
     ${pageUrl}=    Get Current Page URL
     Should Contain    ${pageUrl}    myaccount    both eual
 
 003 Verify Registering an Account with invalid OTP
     Visit Registration Page
-    Fill Registration Details    Rutika    8007022590   Rutika@123    Rutika@123
+    Fill Registration Details    ${firstName}    ${mobileNumber}   ${passWord}   ${confirmPassword}
     ${pageUrl}=    Get Current Page URL
     Should Not Contain    ${pageUrl}    myaccount    both not eual
 

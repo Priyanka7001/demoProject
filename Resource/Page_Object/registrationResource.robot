@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Variables    ../locators/regitrationpage.py
 Resource    commonResources.robot
+Variables    Variables/registrationVariable.py
 
 *** Keywords ***
 
@@ -13,16 +14,16 @@ Visit Registration Page
    
 
 Fill Registration Details
-    [Arguments]    ${name}    ${mobileNumber}    ${password}    ${countryCode}=None
-    Enter User Name    ${name}
+    [Arguments]    ${firstName}    ${mobileNumber}    ${passWord}    ${confirmPassword}
+    Enter User Name    ${firstName}
 #    Select Country Code    ${countryCode}
     Enter A Mobile Number    ${mobileNumber}
     Sleep    30s
     Click On Continue Button
     Unselect subscribe checkbox
     Sleep    20s
-    Enter Password    ${password}
-    Enter Confirm Password    ${confirmpassword}
+    Enter Password    ${passWord}
+    Enter Confirm Password    ${confirmPassword}
     Click On Signup Button
 
     
@@ -32,8 +33,8 @@ Click on My Account Dropdown
     Click Element    ${text_register}
 
 Enter User Name
-    [Arguments]    ${name}
-    Input Text    ${text_name}    ${name}
+    [Arguments]    ${firstName}
+    Input Text    ${text_name}    ${firstName}
 
 Select country code
     [Arguments]    ${countryCode}
@@ -59,12 +60,12 @@ Enter a Mobile Number
     Input Text    ${text_mobilenumber}    ${mobileNumber}
 
 Enter Password
-    [Arguments]    ${password}
-    Input Text    ${text_password}    ${password}
+    [Arguments]    ${passWord}
+    Input Text    ${text_password}    ${passWord}
 
 Enter Confirm Password
-    [Arguments]    ${confirmpassword}
-    Input Text    ${text_confirmpassword}    ${confirmpassword}
+    [Arguments]    ${confirmPassword}
+    Input Text    ${text_confirmpassword}    ${confirmPassword}
 
 Click On Signup Button
     Click Element      ${text_signup}
