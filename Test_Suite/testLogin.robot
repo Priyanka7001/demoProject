@@ -5,6 +5,9 @@ Variables    ../Variable/loginpageVariable.py
 Suite Setup    Open My Browser
 Suite Teardown    Close All Browsers
 
+*** Variables ***
+@{mobileNumber}    9021657453    9021657454
+@{passWord}    Rutika@123    Rutika@12
 
 *** Test Cases ***
 001 Verify the Functionality of Login Button
@@ -15,7 +18,7 @@ Suite Teardown    Close All Browsers
 
 002 Verify Login Functionality with Valid Mobile number and Valid Password
     Visit The Login Page
-    Fill Login Page Details    9021657453    Rutika@123
+    Fill Login Page Details    ${mobileNumber[0]}    ${passWord[0]}
     sleep    4s
     ${actualUrl}=    Get Current Page URL
     Should Contain     ${actualUrl}    myaccount   both URL are equal
@@ -23,7 +26,7 @@ Suite Teardown    Close All Browsers
 
 003 Verify Login Functionality with invalid Mobile number and Valid Password
     Visit The Login Page
-    Fill Login Page Details    9021657452    Rutika@123
+    Fill Login Page Details    ${mobileNumber[1]}    ${passWord[0]}
     Sleep    4s
     ${actualUrl}=    Get Current Page URL
     Should Not Contain    ${actualUrl}    myaccount   Login not done
@@ -31,7 +34,7 @@ Suite Teardown    Close All Browsers
 
 004 Verify Login Functionality with valid Mobile number and invalid Password
     Visit The Login Page
-    Fill Login Page Details    9021657453    Rutika@1234
+    Fill Login Page Details    ${mobileNumber[0]}    ${passWord[1]}
     Sleep    4s
     ${actualUrl}=    Get Current Page URL
     Should Not Contain    ${actualUrl}    myaccount   Login not done
@@ -39,7 +42,7 @@ Suite Teardown    Close All Browsers
 
 005 Verify Login Functionality with invalid Mobile number and invalid Password
     Visit The Login Page
-    Fill Login Page Details    9021657452    Rutika@1234
+    Fill Login Page Details    ${mobileNumber[1]}    ${passWord[1]}
     Sleep    4s
     ${actualUrl}=    Get Current Page URL
     Should Not Contain    ${actualUrl}    myaccount   Login not done
@@ -55,7 +58,7 @@ Suite Teardown    Close All Browsers
 
 007 Verify Login Functionality with Empty Mobile number
     Visit The Login Page
-    Fill Login Page Details    ${EMPTY}    Rutika@123
+    Fill Login Page Details    ${EMPTY}    ${passWord[0]}
     Sleep    4s
     ${actualUrl}=    Get Current Page URL
     Should Not Contain    ${actualUrl}    myaccount   Login not done
@@ -64,7 +67,7 @@ Suite Teardown    Close All Browsers
 
 008 Verify Login Functionality with Empty Password
     Visit The Login Page
-    Fill Login Page Details    9021657453    ${EMPTY}
+    Fill Login Page Details    ${mobileNumber[0]}   ${EMPTY}
     Sleep    4s
     Page Should Contain    login    "Log in Not done"
     Close All Browsers

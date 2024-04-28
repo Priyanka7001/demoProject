@@ -1,106 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-30T14:24:23.384341" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-04-28T22:29:36.318612" rpa="false" schemaversion="5">
 <suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
 <suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
 <suite id="s1-s1-s1" name="testLogin" source="D:\Automation_Testing\Test_Suite\testLogin.robot">
 <kw name="Open My Browser" owner="commonResources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-30T14:24:23.753470" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
+<msg time="2024-04-28T22:29:36.637417" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-30T14:24:23.753470" elapsed="11.134994"/>
+<status status="PASS" start="2024-04-28T22:29:36.637417" elapsed="24.702558"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-30T14:24:34.888464" elapsed="0.297440"/>
+<status status="PASS" start="2024-04-28T22:30:01.341017" elapsed="0.341058"/>
 </kw>
-<status status="PASS" start="2024-03-30T14:24:23.753470" elapsed="11.432434"/>
+<status status="PASS" start="2024-04-28T22:29:36.637417" elapsed="25.044658"/>
 </kw>
-<test id="s1-s1-s1-t1" name="015 Verify incorrect OTP is Rejected" line="110">
+<test id="s1-s1-s1-t1" name="002 Verify Login Functionality with Valid Mobile number and Valid Password" line="19">
 <kw name="Visit the Login Page" owner="loginpageResources">
 <kw name="Click On MyAccount Dropdown and Click on Login" owner="loginpageResources">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${text_myaccountarrow}</arg>
 <arg>40s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-30T14:24:35.189565" elapsed="0.081737"/>
+<status status="PASS" start="2024-04-28T22:30:01.737937" elapsed="0.080236"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-03-30T14:24:35.272301" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
+<msg time="2024-04-28T22:30:01.819171" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
 <arg>${text_myaccountarrow}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-03-30T14:24:35.271302" elapsed="0.337088"/>
+<status status="PASS" start="2024-04-28T22:30:01.819171" elapsed="0.357608"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-30T14:24:35.608390" level="INFO">Clicking element 'xpath://a[normalize-space()='Log in']'.</msg>
+<msg time="2024-04-28T22:30:02.177778" level="INFO">Clicking element 'xpath://a[normalize-space()='Log in']'.</msg>
 <arg>${text_login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-30T14:24:35.608390" elapsed="3.368416"/>
+<status status="PASS" start="2024-04-28T22:30:02.176779" elapsed="3.279971"/>
 </kw>
-<status status="PASS" start="2024-03-30T14:24:35.188566" elapsed="3.789237"/>
+<status status="PASS" start="2024-04-28T22:30:01.736941" elapsed="3.719809"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-30T14:24:40.978697" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-28T22:30:07.457419" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-30T14:24:38.977803" elapsed="2.001893"/>
+<status status="PASS" start="2024-04-28T22:30:05.456750" elapsed="2.000669"/>
 </kw>
-<status status="PASS" start="2024-03-30T14:24:35.187898" elapsed="5.793057"/>
+<status status="PASS" start="2024-04-28T22:30:01.736941" elapsed="5.720478"/>
 </kw>
+<kw name="Fill Login Page Details" owner="loginpageResources">
 <kw name="Enter User Mobile Number" owner="loginpageResources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-30T14:24:40.993445" level="INFO">Typing text '9021657453' into text field 'id:ctl00_phBody_SignIn_txtEmail'.</msg>
+<msg time="2024-04-28T22:30:07.457419" level="INFO">Typing text '9021657453' into text field 'id:ctl00_phBody_SignIn_txtEmail'.</msg>
 <arg>${text_mobile}</arg>
 <arg>${mobileNumber}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-30T14:24:40.992221" elapsed="0.153851"/>
+<status status="PASS" start="2024-04-28T22:30:07.457419" elapsed="0.170541"/>
 </kw>
-<arg>9021657453</arg>
-<status status="PASS" start="2024-03-30T14:24:40.982443" elapsed="0.163629"/>
+<arg>${mobileNumber}</arg>
+<status status="PASS" start="2024-04-28T22:30:07.457419" elapsed="0.170541"/>
 </kw>
-<kw name="Click on Request OTP Button" owner="loginpageResources">
+<kw name="Enter User Passowrd" owner="loginpageResources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T22:30:07.627960" level="INFO">Typing text 'Rutika@123' into text field 'id:ctl00_phBody_SignIn_txtPassword'.</msg>
+<arg>${text_password}</arg>
+<arg>${passWord}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T22:30:07.627960" elapsed="0.180965"/>
+</kw>
+<arg>${passWord}</arg>
+<status status="PASS" start="2024-04-28T22:30:07.627960" elapsed="0.181968"/>
+</kw>
+<kw name="Click on Login Button" owner="loginpageResources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-30T14:24:41.146072" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnRequestOTP'.</msg>
-<arg>${text_requestotp}</arg>
+<msg time="2024-04-28T22:30:07.810921" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnLogin'.</msg>
+<arg>${text_loginbutton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-30T14:24:41.146072" elapsed="0.216577"/>
+<status status="PASS" start="2024-04-28T22:30:07.809928" elapsed="0.248634"/>
 </kw>
-<status status="PASS" start="2024-03-30T14:24:41.146072" elapsed="0.216577"/>
+<status status="PASS" start="2024-04-28T22:30:07.809928" elapsed="0.248634"/>
+</kw>
+<arg>${mobileNumber[0]}</arg>
+<arg>${passWord[0]}</arg>
+<status status="PASS" start="2024-04-28T22:30:07.457419" elapsed="0.601143"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-30T14:24:51.407435" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
+<msg time="2024-04-28T22:30:12.076092" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-30T14:24:41.407189" elapsed="10.000246"/>
+<status status="PASS" start="2024-04-28T22:30:08.075201" elapsed="4.000891"/>
 </kw>
-<kw name="Click on Verify OTP" owner="loginpageResources">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-30T14:24:51.407435" level="INFO">Clicking element 'id:ctl00_phBody_SignIn_btnOTP'.</msg>
-<arg>${text_verifyotp}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-30T14:24:51.407435" elapsed="2.836811"/>
+<kw name="Get Current Page URL" owner="commonResources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-28T22:30:12.107357" level="INFO">${currentURL} = https://www.bookswagon.com/myaccount.aspx</msg>
+<var>${currentURL}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-28T22:30:12.076092" elapsed="0.031265"/>
 </kw>
-<status status="PASS" start="2024-03-30T14:24:51.407435" elapsed="2.836811"/>
+<return>
+<value>${currentURL}</value>
+<status status="PASS" start="2024-04-28T22:30:12.107357" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T22:30:12.107357" level="INFO">${actualUrl} = https://www.bookswagon.com/myaccount.aspx</msg>
+<var>${actualUrl}</var>
+<status status="PASS" start="2024-04-28T22:30:12.076092" elapsed="0.031265"/>
 </kw>
-<kw name="Page Should Not Contain" owner="SeleniumLibrary">
-<msg time="2024-03-30T14:24:54.415581" level="INFO">Current page does not contain text 'myaccount'.</msg>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${actualUrl}</arg>
 <arg>myaccount</arg>
-<arg>Failed</arg>
-<doc>Verifies the current page does not contain ``text``.</doc>
-<status status="PASS" start="2024-03-30T14:24:54.244246" elapsed="0.171335"/>
+<arg>both URL are equal</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-04-28T22:30:12.107357" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-03-30T14:24:35.185904" elapsed="19.229677"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-28T22:30:12.122980" elapsed="6.514858"/>
+</kw>
+<status status="PASS" start="2024-04-28T22:30:01.682075" elapsed="16.955763"/>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-03-30T14:24:54.417576" elapsed="6.422156"/>
+<status status="PASS" start="2024-04-28T22:30:18.637838" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-03-30T14:24:23.415581" elapsed="37.424151"/>
+<status status="PASS" start="2024-04-28T22:29:36.371852" elapsed="42.265986"/>
 </suite>
-<status status="PASS" start="2024-03-30T14:24:23.415581" elapsed="37.424151"/>
+<status status="PASS" start="2024-04-28T22:29:36.368841" elapsed="42.284624"/>
 </suite>
-<status status="PASS" start="2024-03-30T14:24:23.384341" elapsed="37.455391"/>
+<status status="PASS" start="2024-04-28T22:29:36.334208" elapsed="42.319257"/>
 </suite>
 <statistics>
 <total>
