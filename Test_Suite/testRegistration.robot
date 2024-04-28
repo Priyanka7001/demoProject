@@ -27,10 +27,3 @@ ${confirmPassword}    Rutika@123
     Fill Registration Details    ${firstName}    ${mobileNumber}   ${passWord}   ${confirmPassword}
     ${pageUrl}=    Get Current Page URL
     Should Not Contain    ${pageUrl}    myaccount    both not eual
-
-
-
-
-
-
-

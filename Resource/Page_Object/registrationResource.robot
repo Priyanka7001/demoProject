@@ -16,7 +16,6 @@ Visit Registration Page
 Fill Registration Details
     [Arguments]    ${firstName}    ${mobileNumber}    ${passWord}    ${confirmPassword}
     Enter User Name    ${firstName}
-#    Select Country Code    ${countryCode}
     Enter A Mobile Number    ${mobileNumber}
     Sleep    30s
     Click On Continue Button
@@ -69,5 +68,3 @@ Enter Confirm Password
 
 Click On Signup Button
     Click Element      ${text_signup}
-
-
