@@ -5,7 +5,6 @@ Resource    commonResources.robot
 
 *** Keywords ***
 Visit the Login Page
-    Open My Browser
     Click On MyAccount Dropdown And Click On Login
     Sleep    2s
 
