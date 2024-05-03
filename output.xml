@@ -21,10 +21,161 @@
 <kw name="Pre condition of add to cart" owner="cartpageResources">
 <kw name="Visit the Login Page" owner="loginpageResources">
 <kw name="Click On MyAccount Dropdown and Click on Login" owner="loginpageResources">
+>>>>>>> main
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${text_myaccountarrow}</arg>
 <arg>40s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
+<<<<<<< HEAD
+<status status="PASS" start="2024-04-28T18:07:52.760657" elapsed="0.119444"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:07:52.881097" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
+<arg>${text_myaccountarrow}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:07:52.881097" elapsed="0.296435"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:07:53.177532" level="INFO">Clicking element 'xpath://a[contains(text(),'New to Bookswagon?')]'.</msg>
+<arg>${text_register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:07:53.177532" elapsed="4.021322"/>
+</kw>
+<status status="PASS" start="2024-04-28T18:07:52.753633" elapsed="4.446219"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-28T18:07:59.203790" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-28T18:07:57.200334" elapsed="2.003456"/>
+</kw>
+<status status="PASS" start="2024-04-28T18:07:42.331007" elapsed="16.872783"/>
+</kw>
+<kw name="Fill Registration Details" owner="registrationResource">
+<kw name="Enter User Name" owner="registrationResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:07:59.221132" level="INFO">Typing text 'Rutika' into text field 'id:ctl00_phBody_SignUp_txtName'.</msg>
+<arg>${text_name}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:07:59.212023" elapsed="0.396045"/>
+</kw>
+<arg>${firstName}</arg>
+<status status="PASS" start="2024-04-28T18:07:59.211794" elapsed="0.397273"/>
+</kw>
+<kw name="Enter a Mobile Number" owner="registrationResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:07:59.611075" level="INFO">Typing text '9021657452' into text field 'id:ctl00_phBody_SignUp_txtEmail'.</msg>
+<arg>${text_mobilenumber}</arg>
+<arg>${mobileNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:07:59.610063" elapsed="0.165833"/>
+</kw>
+<arg>${mobileNumber}</arg>
+<status status="PASS" start="2024-04-28T18:07:59.609067" elapsed="0.167588"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-28T18:08:29.777342" level="INFO">Slept 30 seconds.</msg>
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-28T18:07:59.776937" elapsed="30.000405"/>
+</kw>
+<kw name="Click on continue button" owner="registrationResource">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:08:29.777342" level="INFO">Clicking button 'id:ctl00_phBody_SignUp_btnContinue'.</msg>
+<arg>${text_continuebutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:08:29.777342" elapsed="2.704900"/>
+</kw>
+<status status="PASS" start="2024-04-28T18:08:29.777342" elapsed="2.704900"/>
+</kw>
+<kw name="Unselect subscribe checkbox" owner="registrationResource">
+<kw name="Unselect Checkbox" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:08:32.484237" level="INFO">Unselecting checkbox 'id:ctl00_phBody_SignUp_chkNewsletter'.</msg>
+<arg>${text_unsubscribe}</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:08:32.483238" elapsed="0.130279"/>
+</kw>
+<status status="PASS" start="2024-04-28T18:08:32.483238" elapsed="0.130929"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-28T18:08:52.614345" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-28T18:08:32.614167" elapsed="20.000178"/>
+</kw>
+<kw name="Enter Password" owner="registrationResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:08:52.614345" level="INFO">Typing text 'Rutika@123' into text field 'id:ctl00_phBody_SignUp_txtPassword'.</msg>
+<arg>${text_password}</arg>
+<arg>${passWord}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:08:52.614345" elapsed="0.223592"/>
+</kw>
+<arg>${passWord}</arg>
+<status status="PASS" start="2024-04-28T18:08:52.614345" elapsed="0.223592"/>
+</kw>
+<kw name="Enter Confirm Password" owner="registrationResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:08:52.838932" level="INFO">Typing text 'Rutika@123' into text field 'id:ctl00_phBody_SignUp_txtConfirmPwd'.</msg>
+<arg>${text_confirmpassword}</arg>
+<arg>${confirmPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:08:52.837937" elapsed="0.172848"/>
+</kw>
+<arg>${confirmPassword}</arg>
+<status status="PASS" start="2024-04-28T18:08:52.837937" elapsed="0.173847"/>
+</kw>
+<kw name="Click On Signup Button" owner="registrationResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:08:53.012697" level="INFO">Clicking element 'xpath://a[@id='ctl00_phBody_SignUp_btnSubmit']'.</msg>
+<arg>${text_signup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T18:08:53.012697" elapsed="0.267485"/>
+</kw>
+<status status="PASS" start="2024-04-28T18:08:53.011784" elapsed="0.268695"/>
+</kw>
+<arg>${firstName}</arg>
+<arg>${mobileNumber}</arg>
+<arg>${passWord}</arg>
+<arg>${confirmPassword}</arg>
+<status status="PASS" start="2024-04-28T18:07:59.203790" elapsed="54.077748"/>
+</kw>
+<kw name="Get Current Page URL" owner="commonResources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-04-28T18:08:54.817962" level="INFO">${currentUrl} = https://www.bookswagon.com/login?q=signup</msg>
+<var>${currentUrl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-04-28T18:08:53.324554" elapsed="1.493408"/>
+</kw>
+<return>
+<value>${currentUrl}</value>
+<status status="PASS" start="2024-04-28T18:08:54.817962" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-28T18:08:54.818948" level="INFO">${pageUrl} = https://www.bookswagon.com/login?q=signup</msg>
+<var>${pageUrl}</var>
+<status status="PASS" start="2024-04-28T18:08:53.322995" elapsed="1.495953"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2024-04-28T18:08:54.818948" level="FAIL">both eual: 'https://www.bookswagon.com/login?q=signup' does not contain 'myaccount'</msg>
+<arg>${pageUrl}</arg>
+<arg>myaccount</arg>
+<arg>both eual</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2024-04-28T18:08:54.818948" elapsed="0.000000">both eual: 'https://www.bookswagon.com/login?q=signup' does not contain 'myaccount'</status>
+</kw>
+<status status="FAIL" start="2024-04-28T18:07:42.328696" elapsed="72.490252">both eual: 'https://www.bookswagon.com/login?q=signup' does not contain 'myaccount'</status>
+</test>
+<status status="FAIL" start="2024-04-28T18:07:41.928138" elapsed="72.898960"/>
+</suite>
+<status status="FAIL" start="2024-04-28T18:07:41.924003" elapsed="72.906977"/>
+</suite>
+<status status="FAIL" start="2024-04-28T18:07:41.866752" elapsed="72.967878"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+=======
 <status status="PASS" start="2024-04-11T20:59:10.308217" elapsed="0.063331"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
@@ -222,15 +373,27 @@
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
+>>>>>>> main
 </total>
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
+<stat pass="0" fail="1" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testRegistration">Automation Testing.Test Suite.testRegistration</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-28T18:07:41.809914" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-04-28T18:07:42.313364" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+=======
 <stat pass="1" fail="0" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testcartPage">Automation Testing.Test Suite.testcartPage</stat>
 </suite>
 </statistics>
 <errors>
+>>>>>>> main
 </errors>
 </robot>
