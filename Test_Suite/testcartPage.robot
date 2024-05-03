@@ -26,7 +26,7 @@ ${CURRENCY_USD}=    USD
     Click On Buy Button
 
 005 Verify the Functionality of Curreny when user will select USD currency
-#    Pre condition of add to cart
+    Pre condition of add to cart
     ${initial_currency}=    Get Currency Text
     ${initial_price}=    Get Total Price
     Select USD Currency
