@@ -7,10 +7,4 @@ report.html
 output.xml
 .html
 .xml
-*.png
-.png
-log.html
-report.html
-output.xml
-.html
-.xml
+.pyc
