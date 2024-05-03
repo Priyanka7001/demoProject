@@ -22,7 +22,7 @@ ${CURRENCY_USD}=    USD
     Page Should Contain    Remove    button not clickable
 
 004 Verify the Functionality of Buy button
-#    Pre condition of add to cart
+    Pre condition of add to cart
     Click On Buy Button
 
 005 Verify the Functionality of Curreny when user will select USD currency

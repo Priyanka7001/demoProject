@@ -1,41 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-05-03T22:09:31.262475" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-05-03T22:31:47.338568" rpa="false" schemaversion="5">
 <suite id="s1" name="Automation Testing" source="D:\Automation_Testing">
 <suite id="s1-s1" name="Test Suite" source="D:\Automation_Testing\Test_Suite">
-<suite id="s1-s1-s1" name="testcartPage" source="D:\Automation_Testing\Test_Suite\testcartPage.robot">
-<kw name="Open My Browser" owner="commonResources" type="SETUP">
-<msg time="2024-05-03T22:09:31.590545" level="FAIL">Resolving argument default values failed: Variable '${URL}' not found.</msg>
-<status status="FAIL" start="2024-05-03T22:09:31.590545" elapsed="0.000000">Resolving argument default values failed: Variable '${URL}' not found.</status>
+<suite id="s1-s1-s1" name="testRegistration" source="D:\Automation_Testing\Test_Suite\testRegistration.robot">
+<test id="s1-s1-s1-t1" name="001 Verify the Functionality of Signup Button from Myaccount Dropdown" line="13">
+<kw name="Visit Registration Page" owner="registrationResource">
+<kw name="Open My Browser" owner="commonResources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:31:47.649458" level="INFO">Opening browser 'chrome' to base url 'https://www.bookswagon.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-03T22:31:47.649458" elapsed="21.204285"/>
 </kw>
-<test id="s1-s1-s1-t1" name="005 Verify the Functionality of Curreny when user will select USD currency" line="28">
-<status status="FAIL" start="2024-05-03T22:09:31.590545" elapsed="0.000000">Parent suite setup failed:
-Resolving argument default values failed: Variable '${URL}' not found.</status>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-03T22:32:08.853743" elapsed="0.238403"/>
+</kw>
+<status status="PASS" start="2024-05-03T22:31:47.649458" elapsed="21.442688"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>visiting registration page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-03T22:32:09.092146" elapsed="0.000000"/>
+</kw>
+<kw name="Click on My Account Dropdown" owner="registrationResource">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${text_myaccountarrow}</arg>
+<arg>40s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-03T22:32:09.107768" elapsed="0.074602"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:32:09.182370" level="INFO">Simulating Mouse Over on element 'xpath://div[@class='arrowimg']'.</msg>
+<arg>${text_myaccountarrow}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-05-03T22:32:09.182370" elapsed="0.302540"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:32:09.484910" level="INFO">Clicking element 'xpath://a[contains(text(),'New to Bookswagon?')]'.</msg>
+<arg>${text_register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-03T22:32:09.484910" elapsed="3.698781"/>
+</kw>
+<status status="PASS" start="2024-05-03T22:32:09.092146" elapsed="4.091545"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-03T22:32:15.185000" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-03T22:32:13.183691" elapsed="2.001309"/>
+</kw>
+<status status="PASS" start="2024-05-03T22:31:47.649458" elapsed="27.535542"/>
+</kw>
+<kw name="Get Current Page URL" owner="commonResources">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-05-03T22:32:15.185000" level="INFO">${currentUrl} = https://www.bookswagon.com/login?q=signup</msg>
+<var>${currentUrl}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-05-03T22:32:15.185000" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${currentUrl}</value>
+<status status="PASS" start="2024-05-03T22:32:15.185000" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-03T22:32:15.185000" level="INFO">${actualUrl} = https://www.bookswagon.com/login?q=signup</msg>
+<var>${actualUrl}</var>
+<status status="PASS" start="2024-05-03T22:32:15.185000" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${actualUrl}</arg>
+<arg>signup</arg>
+<arg>both URL are equal</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-03T22:32:15.185000" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-03T22:31:47.649458" elapsed="27.535542"/>
 </test>
-<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-05-03T22:09:31.590545" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-05-03T22:09:31.293713" elapsed="0.296832">Suite setup failed:
-Resolving argument default values failed: Variable '${URL}' not found.</status>
+<status status="PASS" start="2024-05-03T22:31:47.369809" elapsed="27.830818"/>
 </suite>
-<status status="FAIL" start="2024-05-03T22:09:31.293713" elapsed="0.296832"/>
+<status status="PASS" start="2024-05-03T22:31:47.369809" elapsed="27.830818"/>
 </suite>
-<status status="FAIL" start="2024-05-03T22:09:31.262475" elapsed="0.343664"/>
+<status status="PASS" start="2024-05-03T22:31:47.338568" elapsed="27.862059"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testcartPage">Automation Testing.Test Suite.testcartPage</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation Testing">Automation Testing</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Automation Testing.Test Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testRegistration">Automation Testing.Test Suite.testRegistration</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-03T22:09:31.223665" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 15: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2024-05-03T22:09:31.574939" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 15: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-03T22:31:47.291705" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 16: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-05-03T22:31:47.649458" level="WARN">Error in file 'D:\Automation_Testing\Resource\Page_Object\commonResources.robot' on line 16: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

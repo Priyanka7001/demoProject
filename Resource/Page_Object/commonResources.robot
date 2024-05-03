@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Variables    Variable/qaEnvVar.py
 
 *** Keywords ***
 Open My Browser

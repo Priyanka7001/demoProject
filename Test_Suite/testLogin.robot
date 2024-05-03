@@ -2,7 +2,8 @@
 Library    SeleniumLibrary
 Resource    ../Resource/Page_Object/loginpageResources.robot
 Variables    ../Variable/loginpageVariable.py
-
+Suite Setup    Open My Browser
+Suite Teardown    Close All Browsers
 
 *** Test Cases ***
 001 Verify the Functionality of Login Button
